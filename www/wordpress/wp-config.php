@@ -14,15 +14,48 @@
  * @package WordPress
  */
 
+/**
+ * Define the server environments
+*/
+/* Current server name */
+define('SERVER_SERVERNAME',     $_SERVER['SERVER_NAME']);
+
+/* Production */
+define('SERVER_PRODUCTION',     'website.com');
+define('SERVER_PRODUCTION_WWW', 'www.website.com');
+
+/* Staging */
+define('SERVER_STAGING',        'test.website.com');
+
+/* Development */
+define('SERVER_DEVELOPMENT',    'dev.website.com');
+define('SERVER_LOCALHOST',      'localhost');
+
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'wordpress_setup');
+/** MySQL database name, username and password per server */
+switch (SERVER_SERVERNAME) {
 
-/** MySQL database username */
-define('DB_USER', 'db_user');
+	case SERVER_PRODUCTION:
+	case SERVER_PRODUCTION_WWW:
+		define('DB_NAME',     '');
+		define('DB_USER',     '');
+		define('DB_PASSWORD', '');
+		break;
 
-/** MySQL database password */
-define('DB_PASSWORD', 'db_password');
+	case SERVER_STAGING:
+		define('DB_NAME',     '');
+		define('DB_USER',     '');
+		define('DB_PASSWORD', '');
+		break;
+
+	case SERVER_DEVELOPMENT:
+	case SERVER_LOCALHOST:
+	default:
+		define('DB_NAME',     'wordpress_setup');
+		define('DB_USER',     'db_user');
+		define('DB_PASSWORD', 'db_password');
+		break;
+}
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -62,6 +95,12 @@ define('NONCE_SALT',       '7X+hLwhchqFrA.|P%;mOff3RC6,Qe4|cQRLFI2eYTx?/&.`x8mic
 $table_prefix  = 'wp_';
 
 /**
+ * Set portable site-root URLs
+*/
+define('WP_SITEURL', 'http://' . SERVER_SERVERNAME . '/wordpress');
+define('WP_HOME',    'http://' . SERVER_SERVERNAME . '');
+
+/**
  * WordPress Localized Language, defaults to English.
  *
  * Change this to localize WordPress. A corresponding MO file for the chosen
@@ -78,7 +117,17 @@ define('WPLANG', 'nl_NL');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+switch (SERVER_SERVERNAME) {
+
+	case SERVER_DEVELOPMENT:
+	case SERVER_LOCALHOST:
+		define('WP_DEBUG', true);
+		break;
+
+	default:
+		define('WP_DEBUG', false);
+		break;
+}
 
 /* That's all, stop editing! Happy blogging. */
 
