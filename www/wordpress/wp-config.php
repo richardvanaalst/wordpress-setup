@@ -101,6 +101,11 @@ define('WP_SITEURL', 'http://' . SERVER_SERVERNAME . '/wordpress');
 define('WP_HOME',    'http://' . SERVER_SERVERNAME . '');
 
 /**
+ * Limit the number of post/page revisions to 10
+*/
+define('WP_POST_REVISIONS', 10);
+
+/**
  * WordPress Localized Language, defaults to English.
  *
  * Change this to localize WordPress. A corresponding MO file for the chosen
