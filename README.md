@@ -12,27 +12,26 @@ It is a setup the way I personally prefer to use, so it might not be completely 
 
 ### Clean WordPress installation
 - WordPress version: **3.5.1**
-- Installed in `wordpress` subdirectory, so there's a cleaner root
-- But delivering the website from the root *([More info](http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory))*
+- Installed in `wordpress` subdirectory, so there's a cleaner document root *([More info](http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory))*
 - Removed default plugins: Akismet and Hello Dolly *(Really, what are they still doing here? Go play bingo with IE6.)*
 - Removed old themes: TwentyTen and TwentyEleven *(Again: really?)*
 - Removed dummy posts, comments, pages and widgets *(Now shoo!)*
-- Added default pages: Home and Contact
+- Added default pages: *Home* and *Contact*
 - Export of database
 
 ### Edited `wp-config.php`
-- Domain switch: set site URL, home URL and databases accordingly, so the installation can be transfered to another domain more easily. *(Still need to update all URL's in database using e.g. Search & Replace plugin.)*
+- Domain switch: set *site URL*, *home URL* and database credentials accordingly, so the installation can be transfered to another domain more easily. *(Still need to update all URLs in the database using e.g. Search & Replace plugin.)*
 - Debugging on or off based on domain
 - Limit number of post revisions to 10 instead of unlimited
-- Set language to Dutch: nl_NL
+- Set language to Dutch: 'nl_NL'
 
 ### Modified settings in admin pages
-- Set time-zone to Amsterdam, time and date to Dutch system
+- Set time-zone to 'Amsterdam', time and date to Dutch system
 - Homepage set to static page 'Home'
 - Disabled comments and incoming links
 - Cleaned up screen options *(Dashboard only shows necessary blocks 'Right Now' and 'Recent Drafts', re-ordered some blocks to a more intuitive spot, removed all comment blocks/colums in Posts, Pages and Media)*
-- Set all media sizes to 100x100 pixels *(Sizes will be set though the theme's `functions.php`)*
-- Permalinks to use post name *(example.com/contact/)* instead of query *(example.com/?p=123)*
+- Set all media sizes to 100x100 pixels - Sizes should be set through the theme's `functions.php`
+- Permalinks to use Post name *(example.com/contact/ instead of query example.com/?p=123)*
 
 ### Pre-installed plugins
 I consider these plugins to be default ones that are needed in almost any website. They are not yet enabled in the admin panel, but pre-installed for easier setup.
