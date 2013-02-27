@@ -13,7 +13,7 @@ It is a setup the way I personally prefer to use, so it might not be completely 
 ### Clean WordPress installation
 - WordPress version: **3.5.1**
 - Installed in `wordpress` subdirectory, so there's a cleaner root
-- But delivering the website from the root *[More info](http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory)*
+- But delivering the website from the root *([More info](http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory))*
 - Removed default plugins: Akismet and Hello Dolly *(Really, what are they still doing here? Go play bingo with IE6.)*
 - Removed old themes: TwentyTen and TwentyEleven *(Again: really?)*
 - Removed dummy posts, comments, pages and widgets *(Now shoo!)*
@@ -30,12 +30,12 @@ It is a setup the way I personally prefer to use, so it might not be completely 
 - Set time-zone to Amsterdam, time and date to Dutch system
 - Homepage set to static page 'Home'
 - Disabled comments and incoming links
-- Cleaned up screen options (Dashboard only shows necessary blocks 'Right Now' and 'Recent Drafts', re-ordered some blocks to a more intuitive spot, removed all comment blocks/colums in Posts, Pages and Media)
-- Set all media sizes to 100x100 pixels; Sizes will be set though the theme's `functions.php`
-- Permalinks to use post name *(example.com/contact/)* instead of query *(xample.com/?p=123)*
+- Cleaned up screen options *(Dashboard only shows necessary blocks 'Right Now' and 'Recent Drafts', re-ordered some blocks to a more intuitive spot, removed all comment blocks/colums in Posts, Pages and Media)*
+- Set all media sizes to 100x100 pixels *(Sizes will be set though the theme's `functions.php`)*
+- Permalinks to use post name *(example.com/contact/)* instead of query *(example.com/?p=123)*
 
 ### Pre-installed plugins
-I consider these plugins to be default ones that are needed in almost any website. They are not enabled in the admin panel yet, but pre-installed for easier setup.
+I consider these plugins to be default ones that are needed in almost any website. They are not yet enabled in the admin panel, but pre-installed for easier setup.
 - [Contact Form 7](http://contactform7.com/)
 - [Total Slider](http://www.vanpattenmedia.com/project/total-slider/)
 - [WordPress SEO by Yoast](http://yoast.com/wordpress/seo/)
@@ -47,7 +47,7 @@ And while developing, these are extremely useful:
 - [Search & Replace](http://wordpress.org/extend/plugins/search-and-replace/)
 
 ### Theme
-At this moment, the theme is still the WordPress' default TwentyTwelve. It's a nice responsive theme to start with, but I prefer Bones. Any time soon, I will create a fork of Bones and include it in here as the default starter theme.
+At this moment, the theme is still the WordPress' default *TwentyTwelve*. It's a nice responsive theme to start with, but I prefer *Bones*. Any time soon, I will create a fork of *Bones* and include this in here as the default starter theme.
 
 
 ## Usage
@@ -64,7 +64,7 @@ Import the MySQL database export file provided in `db`.
 - Change Authentication keys and salts via the @link provided in the comments (lines 69-85)
 
 ### 4. Admin pages
-- Edit admin credentials in General settings and Users settings
+- Edit admin credentials in *General* and *Users* settings
 - Enable plugins as needed
 
 ### 5. Create theme
