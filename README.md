@@ -1,7 +1,7 @@
 WordPress setup
 ===============
 
-This WordPress setup is for creating a content website, not a blog. It has an automatic switch for various domains, to move it from a development environment (e.g. *localhost* or *dev.example.com*) to a staging or production server (*test.example.com* or *www.example.com*) more easily. And useful plugins and clean settings as well.
+This WordPress setup is for creating a content website, not a blog. It has an automatic switch for various domains, to move it from a development environment (e.g. *localhost* or *dev.example.com*) to a staging or production server (e.g. *test.example.com* or *www.example.com*) more easily. Includes useful plugins and clean settings as well.
 
 This setup is based on the Dutch version (nl_NL), but can be transformed into any language as needed. However, as this repository develops, I'll only add and modify files and settings according to the Dutch systems (time zone and date, custom post type names, etc.). If you want to translate this to another language, you're free to fork it, but you're on your own. Well, not completely, there's a big WordPress community waiting to help you: [Codex](http://codex.wordpress.org/) and [Forum](http://wordpress.org/support/).
 
@@ -11,7 +11,7 @@ It is a setup the way I personally prefer to use, so it might not be completely 
 ## Contents
 
 ### Clean WordPress installation
-- WordPress version: **3.5.1**
+- WordPress version: **3.5.1** *([Check here for current WordPress version](http://wordpress.org/download/))*
 - Installed in `wordpress` subdirectory, so there's a cleaner document root *([More info](http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory))*
 - Removed default plugins: Akismet and Hello Dolly *(Really, what are they still doing here? Go play bingo with IE6.)*
 - Removed old themes: TwentyTen and TwentyEleven *(Again: really?)*
@@ -20,7 +20,7 @@ It is a setup the way I personally prefer to use, so it might not be completely 
 - Export of database
 
 ### Edited `wp-config.php`
-- Domain switch: set *site URL*, *home URL* and database credentials accordingly, so the installation can be transfered to another domain more easily. *(Still need to update all URLs in the database using e.g. Search & Replace plugin.)*
+- Domain switch: set *site URL*, *home URL* and database credentials accordingly, so the installation can be transfered to another domain more easily. *(Still need to update all URLs in the database using Search & Replace plugin.)*
 - Debugging on or off based on domain
 - Limit number of post revisions to 10 instead of unlimited
 - Set language to Dutch: 'nl_NL'
