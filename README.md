@@ -53,10 +53,10 @@ At this moment, the theme is still the WordPress' default *TwentyTwelve*. It's a
 Follow these steps to use this setup.
 
 ### 1. Installation
-Clone/Unzip/whatevs all files and folders inside `www` (including the possibly invisible `.htaccess`) to the *DocumentRoot* of your website (`public_html`, `httpdocs`, `www`).
+Clone/Unzip/whatevs the 3 items `wordpress`, `index.php` and `.htaccess` to the *DocumentRoot* of your website: `public_html`, `httpdocs`, `www` or other. If you're on Unix, `.htaccess` is possibly invisible.
 
 ### 2. Import Database
-Import the MySQL database export file provided in `db`.
+Import the correct MySQL database export file provided in `db`. Check for the correct WordPress version number above.
 
 ### 3. Edit `wp-config.php`
 - Add the correct URL and database credentials (lines 17-58)
