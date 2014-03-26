@@ -1,10 +1,10 @@
 === Total Slider ===
 Contributors: PeterUpfold, VanPattenMedia
-Donate link: http://www.vanpattenmedia.com/project/total-slider/#contribute
+Donate link: http://www.totalslider.com/donate/
 Tags: slider, slideshow, rotation, rotator
 Requires at least: 3.3.1
-Tested up to: 3.5.1
-Stable tag: 1.1.2
+Tested up to: 3.7
+Stable tag: 1.1.4
 License: GPLv2 or later
 
 Transform your experience with sliders forever. A beautiful, true WYSIWYG interface designed to blend seamlessly with the WordPress core.
@@ -26,9 +26,9 @@ Go to **Appearance** > **Widgets** in WordPress and drag a new Total Slider widg
 = Key links =
 
 * [TotalSlider.com](http://www.totalslider.com)
-* [User Docs](http://www.vanpattenmedia.com/project/total-slider/docs)
+* [User Docs](http://www.totalslider.com/docs/)
 * [Developer Docs](https://github.com/vanpattenmedia/total-slider/wiki)
-* [License](http://www.vanpattenmedia.com/project/total-slider/license/)
+* [License](https://raw.github.com/vanpattenmedia/total-slider/master/license.txt)
 	
 == Installation ==
 
@@ -47,6 +47,12 @@ Go to **Appearance** > **Widgets** in WordPress and drag a new Total Slider widg
 7. Link the slide to a page or post on your site easily.
 
 == Changelog ==
+
+= 1.1.4 =
+* Important fix for WordPress 3.7 — prevents new slides from replacing old ones when you add a new slide.
+
+= 1.1.3 =
+* Fix a bug where Total Slider’s interface would not be functional if the user preferred to not use WordPress’ rich text editor.
 
 = 1.1.2 =
 
@@ -81,6 +87,14 @@ Go to **Appearance** > **Widgets** in WordPress and drag a new Total Slider widg
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.1.4 =
+
+Important fix for WordPress 3.7 — prevents new slides from replacing old ones when you add a new slide.
+
+= 1.1.3 =
+
+Fixes a bug that would cause Total Slider to not be functional with rich text editing turned off.
 
 = 1.1.2 =
 
