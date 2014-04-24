@@ -14,24 +14,30 @@
  * @package WordPress
  */
 
+
+
 /**
  * Define the server environments
-*/
-/* Current server name */
+ */
+
+/** Current server name */
 define('SERVER_SERVERNAME',     $_SERVER['SERVER_NAME']);
 
-/* Production */
+/** Production */
 define('SERVER_PRODUCTION',     'website.com');
 define('SERVER_PRODUCTION_WWW', 'www.website.com');
 
-/* Staging */
+/** Staging */
 define('SERVER_STAGING',        'test.website.com');
 
-/* Development */
+/** Development */
 define('SERVER_DEVELOPMENT',    'dev.website.com');
 define('SERVER_LOCALHOST',      'localhost');
 
+
+
 // ** MySQL settings - You can get this info from your web host ** //
+
 /** MySQL database name, username and password per server */
 switch (SERVER_SERVERNAME) {
 
@@ -66,6 +72,8 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
+
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -86,6 +94,8 @@ define('NONCE_SALT',       'nonce_salt__________use_link_above_to_generate_uniqu
 
 /**#@-*/
 
+
+
 /**
  * WordPress Database Table prefix.
  *
@@ -94,16 +104,22 @@ define('NONCE_SALT',       'nonce_salt__________use_link_above_to_generate_uniqu
  */
 $table_prefix  = 'wp_';
 
+
+
 /**
  * Set portable site-root URLs
-*/
+ */
 define('WP_SITEURL', 'http://' . SERVER_SERVERNAME . '/wordpress');
 define('WP_HOME',    'http://' . SERVER_SERVERNAME . '');
 
+
+
 /**
  * Limit the number of post/page revisions to 10
-*/
+ */
 define('WP_POST_REVISIONS', 10);
+
+
 
 /**
  * WordPress Localized Language, defaults to English.
@@ -114,6 +130,8 @@ define('WP_POST_REVISIONS', 10);
  * language support.
  */
 define('WPLANG', 'nl_NL');
+
+
 
 /**
  * For developers: WordPress debugging mode.
@@ -133,6 +151,8 @@ switch (SERVER_SERVERNAME) {
 		define('WP_DEBUG', false);
 		break;
 }
+
+
 
 /* That's all, stop editing! Happy blogging. */
 
