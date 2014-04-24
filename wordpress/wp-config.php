@@ -115,9 +115,9 @@ define('WP_HOME',    'http://' . SERVER_SERVERNAME . '');
 
 
 /**
- * Limit the number of post/page revisions to 10
+ * Limit the number of post/page revisions
  */
-define('WP_POST_REVISIONS', 10);
+define('WP_POST_REVISIONS', 25);
 
 
 
