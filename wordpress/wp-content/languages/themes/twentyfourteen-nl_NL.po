@@ -10,10 +10,52 @@ msgstr ""
 "X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: Twenty Fourteen\n"
 
+#: inc/customizer.php:102
+msgid "The home page features your choice of up to 6 posts prominently displayed in a grid or slider, controlled by a <a href=\"%1$s\">tag</a>; you can change the tag and layout in <a href=\"%2$s\">Appearance &rarr; Customize</a>. If no posts match the tag, <a href=\"%3$s\">sticky posts</a> will be displayed instead."
+msgstr ""
+
+#: inc/widgets.php:59
+msgid "More videos"
+msgstr ""
+
+#: inc/widgets.php:63
+msgid "More audio"
+msgstr ""
+
+#: inc/widgets.php:67
+msgid "More quotes"
+msgstr ""
+
+#: inc/widgets.php:71
+msgid "More links"
+msgstr ""
+
+#: inc/widgets.php:75
+msgid "More galleries"
+msgstr ""
+
+#: inc/widgets.php:80
+msgid "More asides"
+msgstr ""
+
+#: inc/widgets.php:206
+msgid "%s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/customizer.php:37 inc/customizer.php:102 inc/featured-content.php:410
+#: inc/featured-content.php:419 inc/featured-content.php:479
+msgctxt "featured content default tag slug"
+msgid "featured"
+msgstr ""
+
+#: inc/widgets.php:36
+msgid "Use this widget to list your recent Aside, Quote, Video, Audio, Image, Gallery, and Link posts."
+msgstr ""
+
 msgid "http://wordpress.org/themes/twentyfourteen"
 msgstr "http://wordpress.org/themes/twentyfourteen"
 
-#: inc/customizer.php:36
+#: inc/customizer.php:36 inc/featured-content.php:409
 msgid "Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match the tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
 msgstr "Gebruik een <a href=\"%1$s\">tag</a> om berichten uit te lichten.Wanneer er geen bericht met de tag overeenkomt, zullen <a href=\"%2$s\">sticky berichten</a> getoond worden."
 
@@ -25,11 +67,7 @@ msgstr "Niets gevonden"
 msgid "Display Site Title &amp; Tagline"
 msgstr "Toon site titel &amp; tagline"
 
-#: inc/customizer.php:101
-msgid "The home page features your choice of up to 6 posts prominently displayed in a grid or slider, controlled by the <a href=\"%1$s\">featured</a> tag; you can change the tag and layout in <a href=\"%2$s\">Appearance &rarr; Customize</a>. If no posts match the tag, <a href=\"%3$s\">sticky posts</a> will be displayed instead."
-msgstr "The startpagina geeft je de mogelijkheid om 6 berichten prominent te voorvertonen in een grid of een slider. Dit alles wordt geregeld via de <a href=\"%1$s\">uitgelicht</a> tag; deze tag en weergave kan je wijzigingen in de <a href=\"%2$s\">weergave instellingen</a>. Als er geen berichten overeenkomen worden de <a href=\"%3$s\">sticky berichten</a> getoond."
-
-#: inc/customizer.php:103
+#: inc/customizer.php:104
 msgid "For an in-depth tutorial, and more tips and tricks, visit the <a href=\"%s\">Twenty Fourteen documentation</a>."
 msgstr "Voor een uitgebreide handleiding en meer tips & trucs, bezoek de <a href=\"%s\">Twenty Fourteen documentatie</a>."
 
@@ -47,26 +85,22 @@ msgstr "Y"
 msgid "Site Title Color"
 msgstr "Site titelkleur"
 
-#: inc/featured-content.php:409
-msgid "Use the <a href=\"%1$s\">\"featured\" tag</a> to feature your posts. You can change this to a tag of your choice; if no posts match the tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
-msgstr "Maak gebruik van de <a href=\"%1$s\">\"Uitgelicht\" tag</a> om een bericht uit te lichten. Je kan dit veranderen naar elke willekeurige tag. Als er geen berichten zijn met deze tag, worden de <a href=\"%2$s\">sticky berichten</a> getoond."
-
-#: inc/featured-content.php:428
+#: inc/featured-content.php:431
 msgid "Tag Name"
 msgstr "Tagnaam"
 
-#: inc/featured-content.php:433
+#: inc/featured-content.php:436
 msgid "Don&rsquo;t display tag on front end."
 msgstr "Toon tag niet op de front end."
 
 msgid "In 2014, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier."
 msgstr "In 2014 is het standaard thema een responsive magazine met een modern ontwerp. Om je favoriete inhoud te tonen kan je gebruik maken van een grid over een slider. Gebruik de drie widget gebieden om de site aan te passen. Verder kan je de inhoud tonen met een pagina sjabloon over de gehele breedte of kan je een auteurspagina opstellen om alle bijdragers uit te lichten. Het is nog nooit zo makkelijk geweest om een magazine website te maken met WordPress."
 
-#: functions.php:260
+#: functions.php:254
 msgid "Previous"
 msgstr "Vorige"
 
-#: functions.php:261
+#: functions.php:255
 msgid "Next"
 msgstr "Volgende"
 
@@ -85,19 +119,19 @@ msgctxt "Used between list items, there is a space after the comma."
 msgid ", "
 msgstr ", "
 
-#: functions.php:186
+#: functions.php:182
 msgid "Additional sidebar that appears on the right."
 msgstr "Extra zijbalk die aan de rechterkant wordt weergegeven."
 
-#: functions.php:193
+#: functions.php:189
 msgid "Footer Widget Area"
 msgstr "Footer widget ruimte"
 
-#: functions.php:195
+#: functions.php:191
 msgid "Appears in the footer section of the site."
 msgstr "Verschijnt in de voettekst van de site."
 
-#: functions.php:384
+#: functions.php:372
 msgid "%d Article"
 msgid_plural "%d Articles"
 msgstr[0] "%d artikel"
@@ -111,7 +145,7 @@ msgstr "Vorige afbeelding"
 msgid "Next Image"
 msgstr "Volgende afbeelding"
 
-#: inc/back-compat.php:41 inc/back-compat.php:53 inc/back-compat.php:68
+#: inc/back-compat.php:37 inc/back-compat.php:47 inc/back-compat.php:60
 msgid "Twenty Fourteen requires at least WordPress version 3.6. You are running version %s. Please upgrade and try again."
 msgstr "Twenty Fourteen vereist minimaal WordPress versie 3.6. Jij maakt momenteel gebruik van versie %s. Graag WordPress bijwerken en opnieuw proberen."
 
@@ -123,69 +157,61 @@ msgstr "Achtergrond wordt wellicht alleen getoond bij brede schermen."
 msgid "Featured Content"
 msgstr "Uitgelichte inhoud"
 
-#: inc/customizer.php:47
+#: inc/customizer.php:50
 msgid "Layout"
 msgstr "Layout"
 
-#: inc/customizer.php:51
+#: inc/customizer.php:54
 msgid "Grid"
 msgstr "Grid"
 
-#: inc/customizer.php:52
+#: inc/customizer.php:55
 msgid "Slider"
 msgstr "Slider"
 
-#: inc/customizer.php:102
+#: inc/customizer.php:103
 msgid "Enhance your site design by using <a href=\"%s\">Featured Images</a> for posts you&rsquo;d like to stand out (also known as post thumbnails). This allows you to associate an image with your post without inserting it. Twenty Fourteen uses featured images for posts and pages&mdash;above the title&mdash;and in the Featured Content area on the home page."
 msgstr "Verbeter je site ontwerp door <a href=\"%s\">uitgelichte afbeeldingen</a> te gebruiken voor berichten waar je de nadruk op wil leggen (ook bekend als thumbnails). Dit geeft je de mogelijkheid een afbeelding met je bericht te koppelen zonder het aan de inhoud toe te voegen. Twenty Fourteen gebruikt uitgelichte afbeeldingen voor berichten en pagina's&mdash;boven de titel&mdash;en in het uitgelichte inhoud gedeelte van de beginpagina."
 
-#: inc/template-tags.php:55
+#: inc/template-tags.php:53
 msgid "Posts navigation"
 msgstr "Bericht navigatie"
 
-#: inc/template-tags.php:88
+#: inc/template-tags.php:84
 msgid "<span class=\"meta-nav\">Published In</span>%title"
 msgstr "<span class=\"meta-nav\">Gepubliceerd in</span>%title"
 
-#: inc/template-tags.php:90
+#: inc/template-tags.php:86
 msgid "<span class=\"meta-nav\">Previous Post</span>%title"
 msgstr "<span class=\"meta-nav\">Vorig bericht</span>%title"
 
-#: inc/template-tags.php:91
+#: inc/template-tags.php:87
 msgid "<span class=\"meta-nav\">Next Post</span>%title"
 msgstr "<span class=\"meta-nav\">Volgend bericht</span>%title"
 
-#: inc/widgets.php:44
+#: inc/widgets.php:34
 msgid "Twenty Fourteen Ephemera"
 msgstr "Twenty Fourteen Ephemera"
 
-#: inc/widgets.php:46
-msgid "Use this widget to list your recent Aside, Quote, Video, Audio, Image, Gallery, and Link posts"
-msgstr "Gebruik deze widget om een lijst te tonen van de meest recente Asides, citaten, video&#39;s, audio&#39;s, afbeeldingen, galerijen en berichten."
-
-#: inc/widgets.php:56 taxonomy-post_format.php:39
+#: inc/widgets.php:62 taxonomy-post_format.php:39
 msgid "Audio"
 msgstr "Audio"
 
-#: inc/widgets.php:148
+#: inc/widgets.php:162
 msgid "This gallery contains <a href=\"%1$s\" rel=\"bookmark\">%2$s photo</a>."
 msgid_plural "This gallery contains <a href=\"%1$s\" rel=\"bookmark\">%2$s photos</a>."
 msgstr[0] "Deze galerij bevat <a href=\"%1$s\" rel=\"bookmark\">%2$s afbeelding</a>."
 msgstr[1] "Deze galerij bevat <a href=\"%1$s\" rel=\"bookmark\">%2$s afbeeldingen</a>."
 
-#: inc/widgets.php:189
-msgid "More %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Lees verder %s <span class=\"meta-nav\">&rarr;</span>"
-
-#: inc/widgets.php:236
+#: inc/widgets.php:255
 msgid "Title:"
 msgstr "Titel:"
 
-#: inc/widgets.php:239
+#: inc/widgets.php:258
 msgid "Number of posts to show:"
 msgstr "Aantal berichten om te tonen:"
 
-#: inc/widgets.php:242
+#: inc/widgets.php:261
 msgid "Post format to show:"
 msgstr "Berichtenformaten om te tonen:"
 
@@ -253,25 +279,25 @@ msgstr "Bewerken"
 
 #: content-aside.php:37 content-audio.php:37 content-gallery.php:37
 #: content-image.php:37 content-link.php:37 content-quote.php:37
-#: content-video.php:37 content.php:38 inc/widgets.php:180
+#: content-video.php:37 content.php:38 inc/widgets.php:194
 msgid "Leave a comment"
 msgstr "Geef een reactie"
 
 #: content-aside.php:37 content-audio.php:37 content-gallery.php:37
 #: content-image.php:37 content-link.php:37 content-quote.php:37
-#: content-video.php:37 content.php:38 inc/widgets.php:180
+#: content-video.php:37 content.php:38 inc/widgets.php:194
 msgid "1 Comment"
 msgstr "1 reactie"
 
 #: content-aside.php:37 content-audio.php:37 content-gallery.php:37
 #: content-image.php:37 content-link.php:37 content-quote.php:37
-#: content-video.php:37 content.php:38 inc/widgets.php:180
+#: content-video.php:37 content.php:38 inc/widgets.php:194
 msgid "% Comments"
 msgstr "% reacties"
 
 #: content-aside.php:46 content-audio.php:46 content-gallery.php:46
 #: content-image.php:46 content-link.php:46 content-quote.php:46
-#: content-video.php:46 content.php:54 inc/widgets.php:113 inc/widgets.php:158
+#: content-video.php:46 content.php:54 inc/widgets.php:127 inc/widgets.php:172
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Verder lezen <span class=\"meta-nav\">&rarr;</span>"
 
@@ -291,24 +317,24 @@ msgstr "Primair top-menu"
 msgid "Secondary menu in left sidebar"
 msgstr "Secondair menu in de linker sidebar"
 
-#: functions.php:175
+#: functions.php:171
 msgid "Primary Sidebar"
 msgstr "Primaire sidebar"
 
-#: functions.php:177
+#: functions.php:173
 msgid "Main sidebar that appears on the left."
 msgstr "Hoofd-sidebar die getoond wordt aan de linkerkant."
 
-#: functions.php:184
+#: functions.php:180
 msgid "Content Sidebar"
 msgstr "Inhoud sidebar"
 
-#: functions.php:217
+#: functions.php:213
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr "on"
 
-#: functions.php:500
+#: functions.php:488
 msgid "Page %s"
 msgstr "Pagina %s"
 
@@ -324,19 +350,19 @@ msgstr "Primair menu"
 msgid "Skip to content"
 msgstr "Naar de inhoud springen"
 
-#: inc/template-tags.php:84
+#: inc/template-tags.php:80
 msgid "Post navigation"
 msgstr "Berichtnavigatie"
 
-#: inc/template-tags.php:47
+#: inc/template-tags.php:45
 msgid "&larr; Previous"
 msgstr "&larr; Vorige"
 
-#: inc/template-tags.php:48
+#: inc/template-tags.php:46
 msgid "Next &rarr;"
 msgstr "Volgende &rarr;"
 
-#: inc/template-tags.php:110
+#: inc/template-tags.php:104
 msgid "Sticky"
 msgstr "Sticky"
 
@@ -356,7 +382,7 @@ msgstr "Helaas, er waren geen overeenkomsten met jouw zoekterm. Probeer het opni
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Het lijkt erop dat wij niet kunnen vinden wat jij zoekt. Wellicht dat de zoekfunctie helpt."
 
-#: inc/widgets.php:55 taxonomy-post_format.php:36
+#: inc/widgets.php:58 taxonomy-post_format.php:36
 msgid "Videos"
 msgstr "Video&#39;s"
 
@@ -364,19 +390,23 @@ msgstr "Video&#39;s"
 msgid "Images"
 msgstr "Afbeeldingen"
 
-#: inc/widgets.php:59 taxonomy-post_format.php:48
+#: inc/widgets.php:55
+msgid "More images"
+msgstr ""
+
+#: inc/widgets.php:74 taxonomy-post_format.php:48
 msgid "Galleries"
 msgstr "Galerijen"
 
-#: inc/widgets.php:53 taxonomy-post_format.php:30
+#: inc/widgets.php:79 taxonomy-post_format.php:30
 msgid "Asides"
 msgstr "Asides"
 
-#: inc/widgets.php:58 taxonomy-post_format.php:45
+#: inc/widgets.php:70 taxonomy-post_format.php:45
 msgid "Links"
 msgstr "Links"
 
-#: inc/widgets.php:57 taxonomy-post_format.php:42
+#: inc/widgets.php:66 taxonomy-post_format.php:42
 msgid "Quotes"
 msgstr "Citaten"
 
@@ -384,7 +414,7 @@ msgstr "Citaten"
 msgid "Search Results for: %s"
 msgstr "Zoekresultaten voor: %s"
 
-#: inc/customizer.php:98
+#: inc/customizer.php:99
 msgid "Twenty Fourteen"
 msgstr "Twenty Fourteen"
 
