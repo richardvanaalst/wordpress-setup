@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Apr 24, 2014 at 02:39 PM
+-- Generation Time: May 01, 2014 at 11:08 AM
 -- Server version: 5.5.34
 -- PHP Version: 5.3.28
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `wordpress_setup`
 --
-CREATE DATABASE IF NOT EXISTS `wordpress_setup` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `wordpress_setup`;
 
 -- --------------------------------------------------------
 
@@ -28,8 +26,7 @@ USE `wordpress_setup`;
 -- Table structure for table `wp_commentmeta`
 --
 
-DROP TABLE IF EXISTS `wp_commentmeta`;
-CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
+CREATE TABLE `wp_commentmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `comment_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) DEFAULT NULL,
@@ -45,8 +42,7 @@ CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
 -- Table structure for table `wp_comments`
 --
 
-DROP TABLE IF EXISTS `wp_comments`;
-CREATE TABLE IF NOT EXISTS `wp_comments` (
+CREATE TABLE `wp_comments` (
   `comment_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `comment_post_ID` bigint(20) unsigned NOT NULL DEFAULT '0',
   `comment_author` tinytext NOT NULL,
@@ -75,8 +71,7 @@ CREATE TABLE IF NOT EXISTS `wp_comments` (
 -- Table structure for table `wp_links`
 --
 
-DROP TABLE IF EXISTS `wp_links`;
-CREATE TABLE IF NOT EXISTS `wp_links` (
+CREATE TABLE `wp_links` (
   `link_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `link_url` varchar(255) NOT NULL DEFAULT '',
   `link_name` varchar(255) NOT NULL DEFAULT '',
@@ -100,8 +95,7 @@ CREATE TABLE IF NOT EXISTS `wp_links` (
 -- Table structure for table `wp_options`
 --
 
-DROP TABLE IF EXISTS `wp_options`;
-CREATE TABLE IF NOT EXISTS `wp_options` (
+CREATE TABLE `wp_options` (
   `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `option_name` varchar(64) NOT NULL DEFAULT '',
   `option_value` longtext NOT NULL,
@@ -260,8 +254,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 -- Table structure for table `wp_postmeta`
 --
 
-DROP TABLE IF EXISTS `wp_postmeta`;
-CREATE TABLE IF NOT EXISTS `wp_postmeta` (
+CREATE TABLE `wp_postmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) DEFAULT NULL,
@@ -292,8 +285,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 -- Table structure for table `wp_posts`
 --
 
-DROP TABLE IF EXISTS `wp_posts`;
-CREATE TABLE IF NOT EXISTS `wp_posts` (
+CREATE TABLE `wp_posts` (
   `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `post_author` bigint(20) unsigned NOT NULL DEFAULT '0',
   `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -339,8 +331,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 -- Table structure for table `wp_terms`
 --
 
-DROP TABLE IF EXISTS `wp_terms`;
-CREATE TABLE IF NOT EXISTS `wp_terms` (
+CREATE TABLE `wp_terms` (
   `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL DEFAULT '',
   `slug` varchar(200) NOT NULL DEFAULT '',
@@ -363,8 +354,7 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- Table structure for table `wp_term_relationships`
 --
 
-DROP TABLE IF EXISTS `wp_term_relationships`;
-CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
+CREATE TABLE `wp_term_relationships` (
   `object_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `term_taxonomy_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `term_order` int(11) NOT NULL DEFAULT '0',
@@ -378,8 +368,7 @@ CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
 -- Table structure for table `wp_term_taxonomy`
 --
 
-DROP TABLE IF EXISTS `wp_term_taxonomy`;
-CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
+CREATE TABLE `wp_term_taxonomy` (
   `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `taxonomy` varchar(32) NOT NULL DEFAULT '',
@@ -404,8 +393,7 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 -- Table structure for table `wp_usermeta`
 --
 
-DROP TABLE IF EXISTS `wp_usermeta`;
-CREATE TABLE IF NOT EXISTS `wp_usermeta` (
+CREATE TABLE `wp_usermeta` (
   `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) DEFAULT NULL,
@@ -464,8 +452,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 -- Table structure for table `wp_users`
 --
 
-DROP TABLE IF EXISTS `wp_users`;
-CREATE TABLE IF NOT EXISTS `wp_users` (
+CREATE TABLE `wp_users` (
   `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_login` varchar(60) NOT NULL DEFAULT '',
   `user_pass` varchar(64) NOT NULL DEFAULT '',
