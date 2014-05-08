@@ -21,50 +21,57 @@
  */
 
 /** Current server name */
-define('SERVER_SERVERNAME',     $_SERVER['SERVER_NAME']);
+define('SERVER_NAME',           $_SERVER['SERVER_NAME']);
+
+/** Development */
+define('SERVER_LOCALHOST',      'localhost');
+define('SERVER_DEVELOPMENT',    'dev.website.com');
+
+/** Staging */
+define('SERVER_STAGING',        'test.website.com');
+define('SERVER_STAGING_WWW',    'www.test.website.com');
 
 /** Production */
 define('SERVER_PRODUCTION',     'website.com');
 define('SERVER_PRODUCTION_WWW', 'www.website.com');
 
-/** Staging */
-define('SERVER_STAGING',        'test.website.com');
-
-/** Development */
-define('SERVER_DEVELOPMENT',    'dev.website.com');
-define('SERVER_LOCALHOST',      'localhost');
+/** Path on server (including starting slash, no trailing slash), if not in root.
+ *  Also set this path in .htaccess rewrite rules.
+ *  Example: define('SERVER_PATH', '/wordpress-setup');
+*/
+define('SERVER_PATH',           '');
 
 
 
 // ** MySQL settings - You can get this info from your web host ** //
 
-/** MySQL database name, username and password per server */
-switch (SERVER_SERVERNAME) {
+/** MySQL hostname, database name, username and password per server */
+switch (SERVER_NAME) {
 
-	case SERVER_PRODUCTION:
-	case SERVER_PRODUCTION_WWW:
-		define('DB_NAME',     '');
-		define('DB_USER',     '');
-		define('DB_PASSWORD', '');
-		break;
-
-	case SERVER_STAGING:
-		define('DB_NAME',     '');
-		define('DB_USER',     '');
-		define('DB_PASSWORD', '');
-		break;
-
-	case SERVER_DEVELOPMENT:
 	case SERVER_LOCALHOST:
-	default:
+	case SERVER_DEVELOPMENT:
+		define('DB_HOST',     'localhost');
 		define('DB_NAME',     'wordpress_setup');
 		define('DB_USER',     'db_user');
 		define('DB_PASSWORD', 'db_password');
 		break;
-}
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+	case SERVER_STAGING:
+	case SERVER_STAGING_WWW:
+		define('DB_HOST',     '');
+		define('DB_NAME',     '');
+		define('DB_USER',     '');
+		define('DB_PASSWORD', '');
+		break;
+
+	case SERVER_PRODUCTION:
+	case SERVER_PRODUCTION_WWW:
+		define('DB_HOST',     '');
+		define('DB_NAME',     '');
+		define('DB_USER',     '');
+		define('DB_PASSWORD', '');
+		break;
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -109,8 +116,8 @@ $table_prefix  = 'wp_';
 /**
  * Set portable site-root URLs
  */
-define('WP_SITEURL', 'http://' . SERVER_SERVERNAME . '/wordpress');
-define('WP_HOME',    'http://' . SERVER_SERVERNAME . '');
+define('WP_SITEURL', 'http://' . SERVER_NAME . SERVER_PATH . '/wordpress');
+define('WP_HOME',    'http://' . SERVER_NAME . SERVER_PATH . '');
 
 
 
@@ -140,13 +147,17 @@ define('WPLANG', 'nl_NL');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-switch (SERVER_SERVERNAME) {
+switch (SERVER_NAME) {
 
-	case SERVER_DEVELOPMENT:
 	case SERVER_LOCALHOST:
+	case SERVER_DEVELOPMENT:
+	case SERVER_STAGING:
+	case SERVER_STAGING_WWW:
 		define('WP_DEBUG', true);
 		break;
 
+	case SERVER_PRODUCTION:
+	case SERVER_PRODUCTION_WWW:
 	default:
 		define('WP_DEBUG', false);
 		break;
