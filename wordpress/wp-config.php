@@ -20,56 +20,58 @@
  * Define the server environments
  */
 
-/** Current server name */
-define('SERVER_NAME',           $_SERVER['SERVER_NAME']);
+/** Current server environments */
+define('ENVIRONMENT_PROTOCOL',       strtolower( substr( $_SERVER['SERVER_PROTOCOL'], 0, strpos($_SERVER['SERVER_PROTOCOL'], '/') ) ) . '://');
+define('ENVIRONMENT_NAME',           $_SERVER['SERVER_NAME']);
 
 /** Development */
-define('SERVER_LOCALHOST',      'localhost');
-define('SERVER_DEVELOPMENT',    'dev.website.com');
+define('ENVIRONMENT_LOCALHOST',      'localhost');
+define('ENVIRONMENT_DEVELOPMENT',    'dev.website.com');
 
 /** Staging */
-define('SERVER_STAGING',        'test.website.com');
-define('SERVER_STAGING_WWW',    'www.test.website.com');
+define('ENVIRONMENT_STAGING',        'test.website.com');
+define('ENVIRONMENT_STAGING_WWW',    'www.test.website.com');
 
 /** Production */
-define('SERVER_PRODUCTION',     'website.com');
-define('SERVER_PRODUCTION_WWW', 'www.website.com');
+define('ENVIRONMENT_PRODUCTION',     'website.com');
+define('ENVIRONMENT_PRODUCTION_WWW', 'www.website.com');
 
 /** Path on server (including starting slash, no trailing slash), if not in root.
  *  Also set this path in .htaccess rewrite rules.
- *  Example: define('SERVER_PATH', '/wordpress-setup');
+ *  Example: define('ENVIRONMENT_PATH', '/wordpress-setup');
 */
-define('SERVER_PATH',           '');
+define('ENVIRONMENT_PATH',           '');
 
 
 
 // ** MySQL settings - You can get this info from your web host ** //
 
 /** MySQL hostname, database name, username and password per server */
-switch (SERVER_NAME) {
+switch (ENVIRONMENT_NAME) {
 
-	case SERVER_LOCALHOST:
-	case SERVER_DEVELOPMENT:
-		define('DB_HOST',     'localhost');
-		define('DB_NAME',     'wordpress_setup');
-		define('DB_USER',     'db_user');
-		define('DB_PASSWORD', 'db_password');
+	case ENVIRONMENT_LOCALHOST:
+	case ENVIRONMENT_DEVELOPMENT:
+	default:
+		define('DB_HOST',            'localhost');
+		define('DB_NAME',            'wordpress_setup');
+		define('DB_USER',            'db_user');
+		define('DB_PASSWORD',        'db_password');
 		break;
 
-	case SERVER_STAGING:
-	case SERVER_STAGING_WWW:
-		define('DB_HOST',     '');
-		define('DB_NAME',     '');
-		define('DB_USER',     '');
-		define('DB_PASSWORD', '');
+	case ENVIRONMENT_STAGING:
+	case ENVIRONMENT_STAGING_WWW:
+		define('DB_HOST',            '');
+		define('DB_NAME',            '');
+		define('DB_USER',            '');
+		define('DB_PASSWORD',        '');
 		break;
 
-	case SERVER_PRODUCTION:
-	case SERVER_PRODUCTION_WWW:
-		define('DB_HOST',     '');
-		define('DB_NAME',     '');
-		define('DB_USER',     '');
-		define('DB_PASSWORD', '');
+	case ENVIRONMENT_PRODUCTION:
+	case ENVIRONMENT_PRODUCTION_WWW:
+		define('DB_HOST',            '');
+		define('DB_NAME',            '');
+		define('DB_USER',            '');
+		define('DB_PASSWORD',        '');
 		break;
 }
 
@@ -116,8 +118,8 @@ $table_prefix  = 'wp_';
 /**
  * Set portable site-root URLs
  */
-define('WP_SITEURL', 'http://' . SERVER_NAME . SERVER_PATH . '/wordpress');
-define('WP_HOME',    'http://' . SERVER_NAME . SERVER_PATH . '');
+define('WP_SITEURL', ENVIRONMENT_PROTOCOL . ENVIRONMENT_NAME . ENVIRONMENT_PATH . '/wordpress');
+define('WP_HOME',    ENVIRONMENT_PROTOCOL . ENVIRONMENT_NAME . ENVIRONMENT_PATH . '');
 
 
 
@@ -147,17 +149,17 @@ define('WPLANG', 'nl_NL');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-switch (SERVER_NAME) {
+switch (ENVIRONMENT_NAME) {
 
-	case SERVER_LOCALHOST:
-	case SERVER_DEVELOPMENT:
-	case SERVER_STAGING:
-	case SERVER_STAGING_WWW:
+	case ENVIRONMENT_LOCALHOST:
+	case ENVIRONMENT_DEVELOPMENT:
+	case ENVIRONMENT_STAGING:
+	case ENVIRONMENT_STAGING_WWW:
 		define('WP_DEBUG', true);
 		break;
 
-	case SERVER_PRODUCTION:
-	case SERVER_PRODUCTION_WWW:
+	case ENVIRONMENT_PRODUCTION:
+	case ENVIRONMENT_PRODUCTION_WWW:
 	default:
 		define('WP_DEBUG', false);
 		break;
