@@ -68,6 +68,10 @@ switch (ENVIRONMENT) {
 		define('DB_USER',           '');
 		define('DB_PASSWORD',       '');
 		break;
+
+	default:
+		die('Boo, no environment defined! Edit <code>wp-config.php</code> and add the correct credentials for this environment.');
+		break;
 }
 
 /** Database Charset to use in creating database tables. */
