@@ -11,18 +11,18 @@ It is a setup the way I personally prefer to use, so it might not be completely 
 ## Contents
 
 ### Clean WordPress installation
-- WordPress version: **3.5.1** *([Check here for current WordPress version](http://wordpress.org/download/))*
+- WordPress version: **3.9** *([Check here for current WordPress version](http://wordpress.org/download/))*
 - Installed in `wordpress` subdirectory, so there's a cleaner document root *([More info](http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory))*
-- Removed default plugins: Akismet and Hello Dolly *(Really, what are they still doing here? Go play bingo with IE6.)*
-- Removed old themes: TwentyTen and TwentyEleven *(Again: really?)*
-- Removed dummy posts, comments, pages and widgets *(Now shoo!)*
-- Added default pages: *Home* and *Contact*
+- Removed default plugins Akismet and Hello Dolly
+- Removed old themes TwentyTwelve and TwentyThirteen
+- Removed dummy posts, comments, pages and widgets
+- Added two default pages: *Home* and *Contact*
 - Export of database
 
 ### Edited `wp-config.php`
-- Domain switch: set *site URL*, *home URL* and database credentials accordingly, so the installation can be transfered to another domain more easily. *(Still need to update all URLs in the database using Search & Replace plugin.)*
-- Debugging on or off based on domain
-- Limit number of post revisions to 10 instead of unlimited
+- Environment switch: set *site URL*, *home URL* and database credentials accordingly, so the installation can be transfered to another domain more easily. *(Still need to update all URLs in the database using *Search & Replace* plugin.)*
+- Debugging on or off based on environment
+- Limit number of post revisions to 25 instead of unlimited
 - Set language to Dutch: 'nl_NL'
 
 ### Modified settings in admin pages
@@ -46,17 +46,17 @@ And while developing, these are extremely useful:
 - [Search & Replace](http://wordpress.org/extend/plugins/search-and-replace/)
 
 ### Theme
-At this moment, the theme is still the WordPress' default *TwentyTwelve*. It's a nice responsive theme to start with, but I prefer *Bones*. Any time soon, I will create a fork of *Bones* and include this in here as the default starter theme.
+At this moment, the theme is still the WordPress' default *TwentyFourteen*. It's a nice responsive theme to start with, but I prefer *Bones*. Any time soon, I will create a fork of *Bones* and include this in here as the default starter theme.
 
 
 ## Usage
 Follow these steps to use this setup.
 
 ### 1. Installation
-Clone/Unzip/whatevs the 3 items `wordpress`, `index.php` and `.htaccess` to the *DocumentRoot* of your website: `public_html`, `httpdocs`, `www` or other. If you're on Unix, `.htaccess` is possibly invisible.
+Clone/Unzip/whatevs the 3 items `wordpress`, `index.php` and `.htaccess` to the *DocumentRoot* of your website: `public_html`, `httpdocs`, `www` or other. If you're on Unix, `.htaccess` might be invisible, don't forget that file!
 
 ### 2. Import Database
-Import the correct MySQL database export file provided in `db`. Check for the correct WordPress version number above.
+Import the correct MySQL database export file provided in `db`.
 
 ### 3. Edit `wp-config.php`
 - Add the correct URL and database credentials (lines 17-58)
