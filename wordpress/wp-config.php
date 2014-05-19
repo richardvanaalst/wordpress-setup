@@ -34,10 +34,13 @@ define('ENVIRONMENT_STAGING',       'test.example.com');
 /** Production */
 define('ENVIRONMENT_PRODUCTION',    'example.com');
 
-/** Path on server (including starting slash, no trailing slash), if not in root.
+/** Path on server (including starting slash, no trailing slash),
+ *  if setup is not running in root, else leave empty.
  *  Also set this path in .htaccess rewrite rules.
- *  Example: define('ENVIRONMENT_PATH', '/wordpress-setup');
-*/
+ *
+ *  Example when running on `http://localhost/wordpress-setup/`, add `/wordpress-setup`:
+ *  define('ENVIRONMENT_PATH', '/wordpress-setup');
+ */
 define('ENVIRONMENT_PATH',          '');
 
 
