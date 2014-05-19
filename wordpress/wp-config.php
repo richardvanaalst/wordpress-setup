@@ -24,8 +24,10 @@
 define('ENVIRONMENT_NAME',          $_SERVER['SERVER_NAME']);
 define('ENVIRONMENT',               preg_replace( '[^www\.]', '', ENVIRONMENT_NAME));
 
-/** Development */
+/** Localhost */
 define('ENVIRONMENT_LOCALHOST',     'localhost');
+
+/** Development */
 define('ENVIRONMENT_DEVELOPMENT',   'dev.example.com');
 
 /** Staging */
@@ -34,14 +36,35 @@ define('ENVIRONMENT_STAGING',       'test.example.com');
 /** Production */
 define('ENVIRONMENT_PRODUCTION',    'example.com');
 
+
+
 /** Path on server (including starting slash, no trailing slash),
  *  if setup is not running in root, else leave empty.
  *  Also set this path in .htaccess rewrite rules.
- *
- *  Example when running on `http://localhost/wordpress-setup/`, add `/wordpress-setup`:
- *  define('ENVIRONMENT_PATH', '/wordpress-setup');
+ *  E.g. when running on `http://localhost/wordpress-setup/`, add `/wordpress-setup`.
  */
-define('ENVIRONMENT_PATH',          '');
+switch (ENVIRONMENT) {
+
+	case ENVIRONMENT_LOCALHOST:
+		define('ENVIRONMENT_PATH',  '/wordpress-setup');
+		break;
+
+	case ENVIRONMENT_DEVELOPMENT:
+		define('ENVIRONMENT_PATH',  '');
+		break;
+
+	case ENVIRONMENT_STAGING:
+		define('ENVIRONMENT_PATH',  '');
+		break;
+
+	case ENVIRONMENT_PRODUCTION:
+		define('ENVIRONMENT_PATH',  '');
+		break;
+
+	default:
+		define('ENVIRONMENT_PATH',  '');
+		break;
+}
 
 
 
@@ -51,6 +74,12 @@ define('ENVIRONMENT_PATH',          '');
 switch (ENVIRONMENT) {
 
 	case ENVIRONMENT_LOCALHOST:
+		define('DB_HOST',           'localhost');
+		define('DB_NAME',           'wordpress_setup');
+		define('DB_USER',           'db_user');
+		define('DB_PASSWORD',       'db_password');
+		break;
+
 	case ENVIRONMENT_DEVELOPMENT:
 		define('DB_HOST',           'localhost');
 		define('DB_NAME',           'wordpress_setup');
