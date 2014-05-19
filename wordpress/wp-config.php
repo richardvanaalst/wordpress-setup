@@ -22,7 +22,7 @@
 
 /** Current server environments */
 define('ENVIRONMENT_NAME',          $_SERVER['SERVER_NAME']);
-define('ENVIRONMENT',               preg_replace( '[^www\.]', '', ENVIRONMENT_NAME));
+define('ENVIRONMENT',               preg_replace('[^www\.]', '', ENVIRONMENT_NAME));
 
 /** Localhost */
 define('ENVIRONMENT_LOCALHOST',     'localhost');
