@@ -155,6 +155,13 @@ define('WP_HOME',    'http://' . ENVIRONMENT_NAME . ENVIRONMENT_PATH . '');
 
 
 /**
+ * Disable WordPress auto-update
+ */
+// define('WP_AUTO_UPDATE_CORE', false);
+
+
+
+/**
  * Limit the number of post/page revisions
  */
 define('WP_POST_REVISIONS', 25);
