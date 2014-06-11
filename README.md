@@ -11,7 +11,7 @@ It is a setup the way I personally prefer to use, so it might not be completely 
 ## Contents
 
 ### Clean WordPress installation
-- WordPress version: **3.9** *([Check here for current WordPress version](http://wordpress.org/download/))*
+- WordPress version: **3.9.1** *([Check here for current WordPress version](http://wordpress.org/download/))*
 - Installed in `wordpress` subdirectory, so there's a cleaner document root *([More info](http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory))*
 - Removed default plugins Akismet and Hello Dolly
 - Removed old themes TwentyTwelve and TwentyThirteen
